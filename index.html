@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos SEO (Indicador 18) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calistenia — El secreto de la superfuerza humana. Aprende qué es, sus beneficios, ejercicios básicos, habilidades avanzadas y cómo empezar desde cero." />
+  <title>Calistenia | El secreto de la superfuerza humana</title>
+
+  <!-- Google Fonts (Indicador 8 - tipografía) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Hoja de estilos externa (Indicador 6) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV (Indicador 1 - semántica) ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo" aria-label="Calistenia — Inicio">
+        <!-- Ícono SVG liviano -->
+        <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="8" r="4" fill="currentColor"/>
+          <path d="M8 18 Q14 13 20 16 Q26 13 32 18 L30 28 Q26 24 20 26 Q14 24 10 28 Z" fill="currentColor"/>
+          <rect x="4" y="16" width="6" height="4" rx="2" fill="currentColor"/>
+          <rect x="30" y="16" width="6" height="4" rx="2" fill="currentColor"/>
+          <path d="M13 26 L11 36 M27 26 L29 36" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="logo-text">Calistenia</span>
+      </a>
+
+      <!-- Navegación principal (Indicador 3) -->
+      <nav class="main-nav" aria-label="Menú principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#que-es">¿Qué es?</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#ejercicios">Ejercicios</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#niveles">Niveles</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero" aria-label="Sección de bienvenida">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Street Workout &amp; Fuerza Corporal</p>
+        <h1>El secreto de la<br><span class="highlight">superfuerza</span> humana</h1>
+        <p class="hero-sub">Entrená con tu propio peso. Sin gimnasio. Sin límites.</p>
+        <div class="hero-btns">
+          <a href="#que-es" class="btn-primary">Empezar ahora</a>
+          <a href="#ejercicios" class="btn-outline">Ver ejercicios</a>
+        </div>
+      </div>
+      <!-- Imagen hero (Indicador 4 y 5) -->
+      <div class="hero-img-wrap">
+        <img
+          src="assets/images/hero.jpg"
+          alt="Atleta de calistenia realizando una dominada en barra exterior"
+          class="hero-img"
+        />
+      </div>
+    </section>
+
+    <!-- ¿QUÉ ES? -->
+    <section id="que-es" class="seccion-quees" aria-labelledby="titulo-quees">
+      <div class="container">
+        <div class="quees-grid">
+          <div class="quees-texto">
+            <h2 id="titulo-quees">¿Qué es la Calistenia?</h2>
+            <p>
+              La calistenia es el sistema de entrenamiento que usa el <strong>propio peso corporal</strong> como resistencia. Pero es mucho más que eso: es un estilo de vida basado en ejercicios de empuje (<em>push</em>), arrastre (<em>pull</em>) y tensión que trabajan grandes grupos musculares.
+            </p>
+            <p>
+              Sus raíces vienen del griego <em>kalos</em> (belleza) y <em>sthenos</em> (fuerza). Hoy se practica en parques, calles y gimnasios de todo el mundo bajo el nombre de <strong>Street Workout</strong>.
+            </p>
+            <a href="#beneficios" class="btn-primary">Ver beneficios</a>
+          </div>
+          <!-- Imagen sección (Indicador 4 y 5) -->
+          <div class="quees-img-wrap">
+            <img
+              src="assets/images/quees.jpg"
+              alt="Persona haciendo planche en barras paralelas al aire libre"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="seccion-beneficios" aria-labelledby="titulo-beneficios">
+      <div class="container">
+        <h2 id="titulo-beneficios">¿Por qué practicar Calistenia?</h2>
+        <p class="seccion-intro">Ventajas reales frente a otros métodos de entrenamiento.</p>
+
+        <!-- CSS Grid (Indicador 10) -->
+        <div class="beneficios-grid">
+
+          <article class="beneficio-card">
+            <span class="beneficio-icono" aria-hidden="true">💰</span>
+            <h3>Sin costo</h3>
+            <p>No necesitás gimnasio ni equipamiento caro. Una barra en el parque o el suelo es suficiente para entrenar todo el cuerpo.</p>
+          </article>
+
+          <article class="beneficio-card">
+            <span class="beneficio-icono" aria-hidden="true">🌍</span>
+            <h3>En cualquier lugar</h3>
+            <p>Parque, casa, playa o viaje. Tu cuerpo siempre está con vos y es todo lo que necesitás para entrenar.</p>
+          </article>
+
+          <article class="beneficio-card">
+            <span class="beneficio-icono" aria-hidden="true">💪</span>
+            <h3>Fuerza funcional</h3>
+            <p>Desarrollás fuerza real que se traduce en movimientos del día a día, no solo músculos estéticos.</p>
+          </article>
+
+          <article class="beneficio-card">
+            <span class="beneficio-icono" aria-hidden="true">⚖️</span>
+            <h3>Control corporal</h3>
+            <p>Mejorás el equilibrio, la coordinación y la conciencia corporal de forma progresiva y natural.</p>
+          </article>
+
+          <article class="beneficio-card">
+            <span class="beneficio-icono" aria-hidden="true">🎯</span>
+            <h3>Progresión clara</h3>
+            <p>Desde flexiones básicas hasta el muscle up o la planche. Siempre hay un siguiente nivel que alcanzar.</p>
+          </article>
+
+          <article class="beneficio-card">
+            <span class="beneficio-icono" aria-hidden="true">🧘</span>
+            <h3>Salud articular</h3>
+            <p>El trabajo con peso corporal es más amigable con las articulaciones que el entrenamiento con cargas externas pesadas.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EJERCICIOS BÁSICOS -->
+    <section id="ejercicios" class="seccion-ejercicios" aria-labelledby="titulo-ejercicios">
+      <div class="container">
+        <h2 id="titulo-ejercicios">Ejercicios Básicos</h2>
+        <p class="seccion-intro">Los movimientos fundamentales con los que todo comienza.</p>
+
+        <!-- Flexbox (Indicador 10) -->
+        <div class="ejercicios-flex">
+
+          <article class="ejercicio-card">
+            <div class="ejercicio-img-wrap">
+              <img
+                src="assets/images/dominadas.jpg"
+                alt="Atleta realizando dominadas en barra fija"
+              />
+            </div>
+            <div class="ejercicio-info">
+              <span class="ejercicio-tipo pull">Pull</span>
+              <h3>Dominadas</h3>
+              <p>El ejercicio rey de la calistenia. Trabaja dorsales, bíceps y core. Base para habilidades avanzadas como el muscle up.</p>
+            </div>
+          </article>
+
+          <article class="ejercicio-card">
+            <div class="ejercicio-img-wrap">
+              <img
+                src="assets/images/flexiones.jpg"
+                alt="Persona realizando flexiones de brazos en el suelo"
+              />
+            </div>
+            <div class="ejercicio-info">
+              <span class="ejercicio-tipo push">Push</span>
+              <h3>Flexiones</h3>
+              <p>Pecho, tríceps y hombros en un solo movimiento. Existen decenas de variantes para todos los niveles.</p>
+            </div>
+          </article>
+
+          <article class="ejercicio-card">
+            <div class="ejercicio-img-wrap">
+              <img
+                src="assets/images/fondos.jpg"
+                alt="Atleta haciendo fondos en barras paralelas"
+              />
+            </div>
+            <div class="ejercicio-info">
+              <span class="ejercicio-tipo push">Push</span>
+              <h3>Fondos</h3>
+              <p>En barras paralelas o en silla. Trabaja tríceps, pecho inferior y hombros con gran rango de movimiento.</p>
+            </div>
+          </article>
+
+          <article class="ejercicio-card">
+            <div class="ejercicio-img-wrap">
+              <img
+                src="assets/images/sentadillas.jpg"
+                alt="Persona haciendo sentadillas al aire libre"
+              />
+            </div>
+            <div class="ejercicio-info">
+              <span class="ejercicio-tipo legs">Piernas</span>
+              <h3>Sentadillas</h3>
+              <p>La base del tren inferior. Cuádriceps, glúteos y femorales. La progresión natural lleva a la sentadilla en una pierna (pistol squat).</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES AVANZADAS -->
+    <section id="habilidades" class="seccion-habilidades" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <h2 id="titulo-habilidades">Habilidades Avanzadas</h2>
+        <p class="seccion-intro">Los movimientos que demuestran el poder del entrenamiento con peso corporal.</p>
+
+        <div class="habilidades-grid">
+
+          <article class="habilidad-card">
+            <div class="habilidad-num" aria-hidden="true">01</div>
+            <h3>Muscle Up</h3>
+            <p>Combinación de dominada explosiva y fondo. El primer gran objetivo de todo practicante de calistenia.</p>
+            <span class="habilidad-nivel intermedio">Intermedio</span>
+          </article>
+
+          <article class="habilidad-card">
+            <div class="habilidad-num" aria-hidden="true">02</div>
+            <h3>Front Lever</h3>
+            <p>Posición horizontal suspendido de una barra. Exige una fuerza de core y dorsales extraordinaria.</p>
+            <span class="habilidad-nivel avanzado">Avanzado</span>
+          </article>
+
+          <article class="habilidad-card">
+            <div class="habilidad-num" aria-hidden="true">03</div>
+            <h3>Planche</h3>
+            <p>El cuerpo horizontal en el aire solo con los brazos. Uno de los movimientos más difíciles de la calistenia.</p>
+            <span class="habilidad-nivel elite">Élite</span>
+          </article>
+
+          <article class="habilidad-card">
+            <div class="habilidad-num" aria-hidden="true">04</div>
+            <h3>Handstand</h3>
+            <p>El pino. Control total del equilibrio invertido. Base de la calistenia estática y la gimnasia artística.</p>
+            <span class="habilidad-nivel avanzado">Avanzado</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NIVELES -->
+    <section id="niveles" class="seccion-niveles" aria-labelledby="titulo-niveles">
+      <div class="container">
+        <h2 id="titulo-niveles">¿Por dónde empezar?</h2>
+        <p class="seccion-intro">La calistenia tiene una progresión clara. Encontrá tu punto de partida.</p>
+
+        <div class="niveles-flex">
+
+          <article class="nivel-card principiante">
+            <h3>Principiante</h3>
+            <ul>
+              <li>Flexiones básicas</li>
+              <li>Sentadillas</li>
+              <li>Dominadas asistidas</li>
+              <li>Plancha abdominal</li>
+              <li>Fondos en silla</li>
+            </ul>
+            <p class="nivel-meta">Objetivo: dominar los movimientos fundamentales y construir una base sólida.</p>
+          </article>
+
+          <article class="nivel-card intermedio">
+            <h3>Intermedio</h3>
+            <ul>
+              <li>10+ dominadas seguidas</li>
+              <li>20+ flexiones seguidas</li>
+              <li>Muscle Up</li>
+              <li>Pistol Squat</li>
+              <li>L-Sit en barras</li>
+            </ul>
+            <p class="nivel-meta">Objetivo: ganar fuerza relativa y ejecutar los primeros movimientos técnicos.</p>
+          </article>
+
+          <article class="nivel-card avanzado">
+            <h3>Avanzado</h3>
+            <ul>
+              <li>Front Lever</li>
+              <li>Handstand (pino)</li>
+              <li>Planche Straddle</li>
+              <li>One Arm Pull Up</li>
+              <li>Human Flag</li>
+            </ul>
+            <p class="nivel-meta">Objetivo: dominar las habilidades estáticas y el control corporal total.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-logo">Calistenia</p>
+      <p class="footer-copy">
+        Sitio web estático desarrollado con fines educativos. &copy; 2025<br>
+        <small>Trabajo Práctico — Desarrollo Web Estático</small>
+      </p>
+      <nav class="footer-nav" aria-label="Navegación de pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#ejercicios">Ejercicios</a>
+        <a href="#habilidades">Habilidades</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
