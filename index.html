@@ -20,19 +20,13 @@
   <!-- ========== HEADER / NAV (Indicador 1 - semántica) ========== -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="#inicio" class="logo" aria-label="Calistenia — Inicio">
-        <!-- Ícono SVG liviano -->
-        <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="20" cy="8" r="4" fill="currentColor"/>
-          <path d="M8 18 Q14 13 20 16 Q26 13 32 18 L30 28 Q26 24 20 26 Q14 24 10 28 Z" fill="currentColor"/>
-          <rect x="4" y="16" width="6" height="4" rx="2" fill="currentColor"/>
-          <rect x="30" y="16" width="6" height="4" rx="2" fill="currentColor"/>
-          <path d="M13 26 L11 36 M27 26 L29 36" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
-        </svg>
-        <span class="logo-text">Calistenia</span>
-      </a>
+      <a href="#inicio" class="logo" aria-label="Volver al inicio">
+  <!-- Reemplazamos el icono viejo por la imagen PNG -->
+  <img src="assets/images/logo.png" alt="Logo Calistenia Fuerza" class="logo-img">
+  <span class="logo-text">CALISTENIA</span>
+</a>
 
-      <!-- Navegación principal (Indicador 3) -->
+      <!-- Navegación principal (Indicador 3 y 13) -->
       <nav class="main-nav" aria-label="Menú principal">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
@@ -64,12 +58,11 @@
       </div>
       <!-- Imagen hero (Indicador 4 y 5) -->
       <div class="hero-img-wrap">
-        <img
-          src="assets/images/hero.jpg"
-          alt="Atleta de calistenia realizando una dominada en barra exterior"
-          class="hero-img"
-        />
-      </div>
+  <img
+    src="assets/images/atleta.webp" alt="Atleta de calistenia realizando una dominada en barra exterior"
+    class="hero-img"
+  />
+</div>
     </section>
 
     <!-- ¿QUÉ ES? -->
@@ -89,8 +82,8 @@
           <!-- Imagen sección (Indicador 4 y 5) -->
           <div class="quees-img-wrap">
             <img
-              src="assets/images/quees.jpg"
-              alt="Persona haciendo planche en barras paralelas al aire libre"
+              src="assets/images/calistenia.webp"
+              alt="Persona haciendo calistenia al aire libre"
             />
           </div>
         </div>
@@ -103,7 +96,7 @@
         <h2 id="titulo-beneficios">¿Por qué practicar Calistenia?</h2>
         <p class="seccion-intro">Ventajas reales frente a otros métodos de entrenamiento.</p>
 
-        <!-- CSS Grid (Indicador 10) -->
+        <!-- Bloque clave: CSS Grid para distribución de tarjetas (Indicador 10 y 16) -->
         <div class="beneficios-grid">
 
           <article class="beneficio-card">
@@ -152,13 +145,13 @@
         <h2 id="titulo-ejercicios">Ejercicios Básicos</h2>
         <p class="seccion-intro">Los movimientos fundamentales con los que todo comienza.</p>
 
-        <!-- Flexbox (Indicador 10) -->
+        <!-- Bloque clave: CSS Flexbox adaptable para tarjetas (Indicador 10 y 16) -->
         <div class="ejercicios-flex">
 
           <article class="ejercicio-card">
             <div class="ejercicio-img-wrap">
               <img
-                src="assets/images/dominadas.jpg"
+                src="assets/images/dominadas.webp"
                 alt="Atleta realizando dominadas en barra fija"
               />
             </div>
@@ -172,7 +165,7 @@
           <article class="ejercicio-card">
             <div class="ejercicio-img-wrap">
               <img
-                src="assets/images/flexiones.jpg"
+                src="assets/images/flexiones.webp"
                 alt="Persona realizando flexiones de brazos en el suelo"
               />
             </div>
@@ -186,7 +179,7 @@
           <article class="ejercicio-card">
             <div class="ejercicio-img-wrap">
               <img
-                src="assets/images/fondos.jpg"
+                src="assets/images/fondos.webp"
                 alt="Atleta haciendo fondos en barras paralelas"
               />
             </div>
@@ -200,7 +193,7 @@
           <article class="ejercicio-card">
             <div class="ejercicio-img-wrap">
               <img
-                src="assets/images/sentadillas.jpg"
+                src="assets/images/sentadillas.webp"
                 alt="Persona haciendo sentadillas al aire libre"
               />
             </div>
@@ -215,7 +208,6 @@
       </div>
     </section>
 
-    <!-- HABILIDADES AVANZADAS -->
     <section id="habilidades" class="seccion-habilidades" aria-labelledby="titulo-habilidades">
       <div class="container">
         <h2 id="titulo-habilidades">Habilidades Avanzadas</h2>
@@ -224,31 +216,51 @@
         <div class="habilidades-grid">
 
           <article class="habilidad-card">
+            <div class="habilidad-img-wrap">
+              <img src="assets/images/muscleup.webp" alt="Atleta realizando un Muscle Up en barra alta" class="habilidad-img">
+            </div>
             <div class="habilidad-num" aria-hidden="true">01</div>
-            <h3>Muscle Up</h3>
-            <p>Combinación de dominada explosiva y fondo. El primer gran objetivo de todo practicante de calistenia.</p>
-            <span class="habilidad-nivel intermedio">Intermedio</span>
+            <div class="habilidad-info">
+              <h3>Muscle Up</h3>
+              <p>Combinación de dominada explosiva y fondo. El primer gran objetivo de todo practicante de calistenia.</p>
+              <span class="habilidad-nivel intermedio">Intermedio</span>
+            </div>
           </article>
 
           <article class="habilidad-card">
+            <div class="habilidad-img-wrap">
+              <img src="assets/images/front_lever.webp" alt="Atleta sosteniendo la posición de Front Lever perfectamente horizontal" class="habilidad-img">
+            </div>
             <div class="habilidad-num" aria-hidden="true">02</div>
-            <h3>Front Lever</h3>
-            <p>Posición horizontal suspendido de una barra. Exige una fuerza de core y dorsales extraordinaria.</p>
-            <span class="habilidad-nivel avanzado">Avanzado</span>
+            <div class="habilidad-info">
+              <h3>Front Lever</h3>
+              <p>Posición horizontal suspendido de una barra. Exige una fuerza de core y dorsales extraordinaria.</p>
+              <span class="habilidad-nivel avanzado">Avanzado</span>
+            </div>
           </article>
 
           <article class="habilidad-card">
+            <div class="habilidad-img-wrap">
+              <img src="assets/images/planche.webp" alt="Atleta ejecutando una Full Planche en el suelo" class="habilidad-img">
+            </div>
             <div class="habilidad-num" aria-hidden="true">03</div>
-            <h3>Planche</h3>
-            <p>El cuerpo horizontal en el aire solo con los brazos. Uno de los movimientos más difíciles de la calistenia.</p>
-            <span class="habilidad-nivel elite">Élite</span>
+            <div class="habilidad-info">
+              <h3>Planche</h3>
+              <p>El cuerpo horizontal en el aire solo con los brazos. Uno de los movimientos más difíciles de la calistenia.</p>
+              <span class="habilidad-nivel elite">Élite</span>
+            </div>
           </article>
 
           <article class="habilidad-card">
+            <div class="habilidad-img-wrap">
+              <img src="assets/images/handstand.webp" alt="Atleta manteniendo el equilibrio en Handstand o pino" class="habilidad-img">
+            </div>
             <div class="habilidad-num" aria-hidden="true">04</div>
-            <h3>Handstand</h3>
-            <p>El pino. Control total del equilibrio invertido. Base de la calistenia estática y la gimnasia artística.</p>
-            <span class="habilidad-nivel avanzado">Avanzado</span>
+            <div class="habilidad-info">
+              <h3>Handstand</h3>
+              <p>El pino. Control total del equilibrio invertido. Base de la calistenia estática y la gimnasia artística.</p>
+              <span class="habilidad-nivel avanzado">Avanzado</span>
+            </div>
           </article>
 
         </div>
@@ -308,17 +320,26 @@
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <p class="footer-logo">Calistenia</p>
+      
+      <div class="footer-row-top">
+        <p class="footer-logo">Calistenia</p>
+        <nav class="footer-nav" aria-label="Navegación de pie de página">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#que-es">¿Qué es?</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#ejercicios">Ejercicios</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#niveles">Niveles</a></li>
+          </ul>
+        </nav>
+      </div>
+
       <p class="footer-copy">
-        Sitio web estático desarrollado con fines educativos. &copy; 2025<br>
+        Sitio web estático desarrollado con fines educativos. &copy; 2026<br>
         <small>Trabajo Práctico — Desarrollo Web Estático</small>
       </p>
-      <nav class="footer-nav" aria-label="Navegación de pie de página">
-        <a href="#inicio">Inicio</a>
-        <a href="#que-es">¿Qué es?</a>
-        <a href="#ejercicios">Ejercicios</a>
-        <a href="#habilidades">Habilidades</a>
-      </nav>
+
     </div>
   </footer>
 

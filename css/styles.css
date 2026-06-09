@@ -78,20 +78,41 @@ strong { color: var(--color-blanco); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   text-decoration: none;
-  color: var(--color-verde);
 }
 
-.logo-icon { width: 28px; height: 28px; flex-shrink: 0; }
+/* Control y transformación de color de la imagen PNG */
+.logo-img {
+  width: 32px;  /* Ajustamos un pelín el tamaño para que luzca imponente */
+  height: 32px;
+  flex-shrink: 0;
+  object-fit: contain;
 
+  /* TRUCO CSS: Convierte mágicamente el rojo de la imagen original en tu verde exacto */
+  filter: brightness(0) saturate(100%) invert(73%) sepia(50%) saturate(600%) hue-rotate(85deg) brightness(95%) contrast(85%);
+  
+  transition: transform var(--transicion);
+}
+
+/* El texto de la marca al lado del icono */
 .logo-text {
   font-family: var(--fuente-titulo);
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-blanco);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  transition: color var(--transicion);
+}
+
+/* Efecto de interacción al pasar el mouse por el logo (Indicador 19) */
+.logo:hover .logo-img {
+  transform: scale(1.1); /* Hace que el atleta verde crezca un poquito */
+}
+
+.logo:hover .logo-text {
+  color: var(--color-verde); /* El texto se ilumina en verde al pasar el cursor */
 }
 
 /* Nav links (Indicador 19 - hover) */
@@ -202,7 +223,10 @@ strong { color: var(--color-blanco); }
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--color-verde);
-  margin-bottom: 1rem;
+  
+  margin-top: 2rem;    
+  margin-bottom: 1.5rem; 
+  display: inline-block;
 }
 
 .hero h1 { color: var(--color-blanco); margin-bottom: 1rem; }
@@ -395,18 +419,19 @@ strong { color: var(--color-blanco); }
 /* Grid (Indicador 10) */
 .habilidades-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Subimos a 240px para albergar mejor la imagen */
   gap: 1.5rem;
 }
 
 .habilidad-card {
   background-color: var(--color-gris-card);
   border-radius: var(--radius);
-  padding: 2rem 1.5rem;
   border: 1px solid rgba(255,255,255,0.06);
   position: relative;
-  overflow: hidden;
-  transition: border-color var(--transicion), transform var(--transicion); /* Indicador 19 */
+  overflow: hidden; /* Corta las esquinas de la imagen según el radio del borde */
+  transition: border-color var(--transicion), transform var(--transicion);
+  display: flex;
+  flex-direction: column;
 }
 
 .habilidad-card:hover {
@@ -414,18 +439,48 @@ strong { color: var(--color-blanco); }
   transform: translateY(-4px);
 }
 
-.habilidad-num {
-  font-family: var(--fuente-titulo);
-  font-size: 4rem;
-  font-weight: 800;
-  color: rgba(57,211,83,0.08);
-  position: absolute;
-  top: 0.5rem; right: 1rem;
-  line-height: 1;
+/* Estilos para el contenedor de la imagen */
+.habilidad-img-wrap {
+  height: 240px; /* Altura controlada para las fotos de habilidad */
+  overflow: hidden;
+  background: var(--color-gris-mid);
 }
 
-.habilidad-card h3 { color: var(--color-blanco); margin-bottom: 0.6rem; }
+.habilidad-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que encaje perfecto sin deformarse */
+  display: block;
+  transition: transform var(--transicion);
+}
 
+.habilidad-card:hover .habilidad-img {
+  transform: scale(1.05); /* Sutil efecto zoom al pasar el mouse */
+}
+
+/* Contenedor del texto para mantener el espacio de adentro */
+.habilidad-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* El número flotante se mantiene arriba de forma elegante */
+.habilidad-num {
+  font-family: var(--fuente-titulo);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(57,211,83,0.12); /* Un toque más visible sobre la tarjeta */
+  position: absolute;
+  top: 15.5rem; /* Lo bajamos un poco para que no se pise con la imagen */
+  right: 1rem;
+  line-height: 1;
+  z-index: 1;
+}
+
+.habilidad-info h3 { color: var(--color-blanco); margin-bottom: 0.6rem; }
+/* Badges de nivel */
 /* Badges de nivel */
 .habilidad-nivel {
   display: inline-block;
@@ -435,7 +490,9 @@ strong { color: var(--color-blanco); }
   letter-spacing: 1px;
   padding: 0.25rem 0.7rem;
   border-radius: 4px;
-  margin-top: 1rem;
+  
+  align-self: flex-start; 
+  margin-top: auto;
 }
 
 .habilidad-nivel.intermedio { background: rgba(249,115,22,0.2); color: var(--color-push); }
@@ -496,24 +553,31 @@ strong { color: var(--color-blanco); }
 .nivel-meta {
   font-size: 0.82rem;
   font-style: italic;
-  color: #666 !important;
+  color: #aaaaaa !important; 
 }
 
 /* ============================================
-   FOOTER
+   FOOTER 
    ============================================ */
 .site-footer {
   background-color: #060606;
   border-top: 2px solid var(--color-verde);
-  padding: 2.5rem 0;
+  padding: 3rem 0 2rem 0; /* Más espacio arriba, menos abajo */
 }
 
+/* Contenedor principal del footer */
 .footer-inner {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column; /* Apila el bloque principal y los créditos */
+  gap: 2.5rem;
+}
+
+/* Fila superior: Contiene Logo y Navegación */
+.footer-row-top {
+  display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-logo {
@@ -523,28 +587,53 @@ strong { color: var(--color-blanco); }
   color: var(--color-blanco) !important;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin: 0;
 }
 
-.footer-copy { font-size: 0.8rem; color: #555 !important; text-align: center; }
-.footer-copy small { color: #333; }
-
-.footer-nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+/* Menú horizontal de una sola línea limpia */
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Espaciado fijo entre enlaces */
+  margin: 0;
+  padding: 0;
+}
 
 .footer-nav a {
-  color: #555;
+  color: var(--color-gris-texto);
   text-decoration: none;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color var(--transicion); /* Indicador 19 */
+  transition: color var(--transicion);
+  white-space: nowrap; /* Evita que los enlaces se corten */
 }
-.footer-nav a:hover { color: var(--color-verde); }
 
+.footer-nav a:hover { 
+  color: var(--color-verde); 
+}
+
+/* Fila inferior: Créditos centrados con una línea sutil divisoria */
+.footer-copy { 
+  font-size: 0.8rem; 
+  color: var(--color-gris-texto) !important;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Separador delicado */
+  padding-top: 1.5rem;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.footer-copy small { 
+  color: #555; 
+  display: block; 
+  margin-top: 0.2rem; 
+}
 /* ============================================
    RESPONSIVE — Media Queries (Indicador 9)
    ============================================ */
 @media (max-width: 900px) {
-  .quees-grid { grid-template-columns: 1fr; }
+  .quees-grid { grid-template-columns: 1fr; gap: 2rem; }
   .quees-img-wrap { order: -1; }
   .quees-img-wrap img { height: 260px; }
 
@@ -586,13 +675,35 @@ strong { color: var(--color-blanco); }
   .main-nav.open a { padding: 0.6rem; font-size: 1rem; }
   .nav-toggle { display: block; }
 
-  .ejercicios-flex { flex-direction: column; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-nav { justify-content: center; }
+  .footer-inner { 
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-row-top {
+    flex-direction: column; /* Apila el logo arriba del menú en el celular */
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center; /* Centra el contenedor del menú */
+  }
+
+  .footer-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Si la pantalla es muy chica, los enlaces bajan ordenados */
+    justify-content: center;
+    gap: 1rem 1.2rem;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   .beneficios-grid { grid-template-columns: 1fr; }
-  .habilidades-grid { grid-template-columns: 1fr 1fr; }
+  /* Corrección crítica (Indicador 9): Evita el amontonamiento en celulares chicos */
+  .habilidades-grid { grid-template-columns: 1fr; } 
   .niveles-flex { flex-direction: column; }
 }
